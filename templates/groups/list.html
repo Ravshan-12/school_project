@@ -9,7 +9,7 @@
     <button><a href="{% url 'groups:create' %}">Create Group</a></button>
     <button><a href="{% url 'home' %}">Back Home</a></button>
     {% for group in groups %}
-        <a href="{% url 'groups:detail' pk=group.pk %}"><h3>{{ group.group_name }}<br>{{ group.group_type }}</h3></a>
+        <a href="{% url 'groups:detail' pk=group.pk %}"><h3>{{ group.group_name }} {{ group.group_type }}</h3></a>
     {% empty %}
         <h3>No Groups</h3>
     {% endfor %}

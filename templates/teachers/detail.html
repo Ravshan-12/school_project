@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher Detail</title>
+</head>
+<body>
+    <h1>Teacher Detail</h1>
+     <button><a href="{% url 'teachers:list' %}">Back to list</a></button>
+     <button><a href="{% url 'home' %}">Back home</a></button>
+
+    <h3>First name: {{ teacher.first_name }}</h3>
+    <h3>Last name: {{ teacher.last_name }}</h3>
+    <h3>Subject: {{ teacher.subject }}</h3>
+    <button><a href="{% url 'teachers:delete' pk=teacher.pk %}">Delete</a></button>
+</body>
+</html>
